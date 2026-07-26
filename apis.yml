@@ -1,21 +1,47 @@
 aid: designstripe
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/designstripe.png
 name: designstripe
-description: 'designstripe is a company surfaced as a portfolio company of insight-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'designstripe (rebranded in 2026 as Visual, visual.app) is an AI-powered
+  design platform for go-to-market teams that automates the creation of presentations,
+  proposals, QBRs, and marketing assets through conversational AI agents, with brand-lock
+  consistency across generated materials. It serves sales, marketing, and customer
+  success teams. Backed by Insight Partners. As of July 2026 the product is under active
+  development / waitlist and references API integrations ("every agent is an endpoint"),
+  but publishes no public developer documentation, OpenAPI definition, SDKs, or /.well-known
+  discovery surface. This profile was surfaced as an Insight Partners portfolio company
+  and enriched by the API Evangelist pipeline.'
 url: https://raw.githubusercontent.com/api-evangelist/designstripe/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - insight-partners
+x-rebranded-to: visual.app
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Consumer
+- Design
+- Artificial Intelligence
+- Presentations
+- Go-To-Market
+- Marketing
+- Generative AI
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +49,21 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/designstripe-domain-security.yml
 - type: Website
   url: https://designstripe.com/
+- type: Website
+  name: Visual (rebrand)
+  url: https://visual.app/
+- type: Blog
+  url: https://visual.app/blog
+- type: PrivacyPolicy
+  url: https://visual.app/privacy
+- type: Support
+  url: https://visual.app/contact
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
