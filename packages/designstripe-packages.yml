@@ -1,0 +1,49 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  registry.npmjs.org (name + full-text search), pypi.org, api.github.com org
+  listings for github.com/DesignStripe and github.com/visual-app, and the
+  visual.app marketing site
+package_count: 0
+packages: []
+note: >-
+  No first-party client library was found on any public registry. Searched npm
+  for `designstripe`, `@designstripe/sdk`, `visual-app` and `@visual/sdk`
+  (registry.npmjs.org full-text search for "designstripe" returns 5 results, all
+  belonging to the unrelated @lidojs project) and PyPI for `designstripe` (404).
+  The npm name `visual-app` resolves (HTTP 200) but is an empty placeholder — no
+  dist-tags, no versions, no repository, no maintainers — so it is NOT recorded
+  as a package. github.com/DesignStripe holds 13 public repositories, all
+  machine-learning experiments, Figma plugins and forks last pushed in 2023;
+  none is a client library and none contains an API specification.
+  github.com/visual-app exists but is empty (0 public repositories). No `SDKs`
+  pointer is emitted because there is no SDK to point at.
+registries_checked:
+- registry: npm
+  query: designstripe
+  status: 404
+- registry: npm
+  query: '@designstripe/sdk'
+  status: 404
+- registry: npm
+  query: '@visual/sdk'
+  status: 404
+- registry: npm
+  query: visual-app
+  status: 200
+  result: empty placeholder package (no versions, no dist-tags, no repository)
+- registry: npm-search
+  query: designstripe
+  status: 200
+  result: 5 unrelated results (@lidojs/*)
+- registry: pypi
+  query: designstripe
+  status: 404
+- registry: github
+  query: orgs/DesignStripe/repos
+  status: 200
+  result: 13 repos, none a client library, last push 2023-11-22
+- registry: github
+  query: orgs/visual-app/repos
+  status: 200
+  result: 0 repos

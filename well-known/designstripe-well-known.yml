@@ -1,0 +1,137 @@
+generated: '2026-08-13'
+method: probed
+source: live unauthenticated HTTP probes of designstripe.com, visual.app and api.designstripe.com
+note: >-
+  Every /.well-known/ path was probed on all three hosts associated with this
+  profile and NONE returned a document. designstripe.com 308-redirects every path
+  to visual.app; visual.app is a Next.js marketing site that answers every
+  unknown path with a 404 HTML shell; api.designstripe.com sits behind Google
+  Cloud Identity-Aware Proxy and 302s every request with "Invalid IAP
+  credentials: empty token". No WellKnown or SecurityTxt pointer is emitted in
+  apis.yml because nothing is served — this file records a verified ABSENCE.
+hosts:
+- host: designstripe.com
+  role: legacy marketing domain (redirects to visual.app)
+- host: visual.app
+  role: current marketing site (owner of the designstripe.com domain since March 2025)
+- host: api.designstripe.com
+  role: >-
+    DNS A record to a Google Cloud load balancer (34.49.26.225). TLS presents a
+    certificate for an unrelated host (CN=cp2096.apps-test.valeo.com), so the
+    host is not publicly usable; with certificate verification disabled every
+    path answers from Google Cloud IAP.
+probes:
+- host: designstripe.com
+  path: /.well-known/security.txt
+  url: https://designstripe.com/.well-known/security.txt
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/openid-configuration
+  url: https://designstripe.com/.well-known/openid-configuration
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/oauth-authorization-server
+  url: https://designstripe.com/.well-known/oauth-authorization-server
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/oauth-protected-resource
+  url: https://designstripe.com/.well-known/oauth-protected-resource
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/api-catalog
+  url: https://designstripe.com/.well-known/api-catalog
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/ai-plugin.json
+  url: https://designstripe.com/.well-known/ai-plugin.json
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/agent-card.json
+  url: https://designstripe.com/.well-known/agent-card.json
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/agent.json
+  url: https://designstripe.com/.well-known/agent.json
+  status: 308
+  file: null
+- host: designstripe.com
+  path: /.well-known/mcp.json
+  url: https://designstripe.com/.well-known/mcp.json
+  status: 308
+  file: null
+- host: visual.app
+  path: /.well-known/security.txt
+  url: https://visual.app/.well-known/security.txt
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/openid-configuration
+  url: https://visual.app/.well-known/openid-configuration
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/oauth-authorization-server
+  url: https://visual.app/.well-known/oauth-authorization-server
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/oauth-protected-resource
+  url: https://visual.app/.well-known/oauth-protected-resource
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/api-catalog
+  url: https://visual.app/.well-known/api-catalog
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/ai-plugin.json
+  url: https://visual.app/.well-known/ai-plugin.json
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/agent-card.json
+  url: https://visual.app/.well-known/agent-card.json
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/agent.json
+  url: https://visual.app/.well-known/agent.json
+  status: 404
+  content_type: text/html
+  file: null
+- host: visual.app
+  path: /.well-known/mcp.json
+  url: https://visual.app/.well-known/mcp.json
+  status: 404
+  content_type: text/html
+  file: null
+- host: api.designstripe.com
+  path: /.well-known/* (all paths)
+  url: https://api.designstripe.com/
+  status: 302
+  file: null
+  note: 'Google Cloud IAP challenge — "Invalid IAP credentials: empty token"'
+summary:
+  paths_probed: 19
+  documents_found: 0
+  security_txt: false
+  openid_configuration: false
+  oauth_authorization_server: false
+  api_catalog: false
+  ai_plugin: false
+  agent_card: false

@@ -1,0 +1,39 @@
+generated: '2026-08-13'
+method: probed
+source: >-
+  live MCP JSON-RPC tools/list probes against visual.app and api.designstripe.com,
+  plus npm/PyPI/GitHub searches for a published server package
+status: none
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: probed
+tools: []
+note: >-
+  No MCP server exists — neither a remote endpoint nor a local stdio package.
+  POST {"jsonrpc":"2.0","id":1,"method":"tools/list"} returned 404 (HTML shell)
+  at https://visual.app/mcp and https://visual.app/api/mcp, and 401 "Invalid IAP
+  credentials: empty token" at https://api.designstripe.com/mcp — a Google Cloud
+  IAP challenge, not an MCP response. https://visual.app/.well-known/mcp.json is
+  404. No `@designstripe/*` or `@visual/*` MCP package is published to npm and
+  github.com/visual-app has no public repositories. No candidate tool list could
+  be derived either, because the repo holds no OpenAPI to derive one from. No
+  `MCPServer` pointer is emitted in apis.yml: this file records a verified
+  absence, and no endpoint URL is invented.
+probes:
+- url: https://visual.app/mcp
+  method: POST tools/list
+  status: 404
+- url: https://visual.app/api/mcp
+  method: POST tools/list
+  status: 404
+- url: https://api.designstripe.com/mcp
+  method: POST tools/list
+  status: 401
+  result: Google Cloud IAP challenge
+- url: https://visual.app/.well-known/mcp.json
+  method: GET
+  status: 404

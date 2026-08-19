@@ -1,0 +1,27 @@
+generated: '2026-08-13'
+method: searched
+source: https://visual.app/
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No rate limits are documented because no developer documentation exists. The
+  provider markets an API on its homepage ("Product / Integrations — Every agent
+  is an endpoint. Integrate design agents with your existing automation
+  workflows or applications using our API.") but publishes no developer portal,
+  API reference or docs host: https://visual.app/docs, /api and /developers all
+  return 404, and docs.visual.app, developer.visual.app and api.visual.app do
+  not resolve in DNS. The only API-shaped host, api.designstripe.com, is behind
+  Google Cloud IAP and returns 302/401 "Invalid IAP credentials: empty token" on
+  every path, so no live response headers could be observed either. Verified
+  zero, not an unchecked field.
+pages_probed:
+- url: https://visual.app/docs
+  status: 404
+- url: https://visual.app/api
+  status: 404
+- url: https://visual.app/developers
+  status: 404
+- url: https://api.designstripe.com/
+  status: 302
+  result: Google Cloud IAP challenge, no response headers from an application
