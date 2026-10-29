@@ -64,6 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-designstripe is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.
+The designstripe.com domain, blog and social handles were acquired by Visual (visual.app) in March 2025. Visual states on its own site that it acquired the marketing assets only and that Designstripe Inc. continues to operate independently, so this is an asset purchase rather than a rebrand. designstripe.com now 308-redirects to visual.app, an AI-first presentation and design-agent product for go-to-market teams — it generates presentations, proposals, QBRs and campaign assets through conversational agents with brand-lock consistency for sales, marketing and customer success. The legacy designstripe illustration marketplace and AI ad-maker have been retired. As of August 2026 the product is waitlist-only and markets an API on its homepage ("every agent is an endpoint... integrate design agents with your existing automation workflows or applications using our API"), but publishes no developer portal, API reference, OpenAPI definition, GraphQL endpoint, MCP server, SDK on any package registry, pricing page, or /.well-known discovery document. The one API-shaped host, api.designstripe.com, sits behind Google Cloud Identity-Aware Proxy and answers every request with "Invalid IAP credentials: empty token" while presenting a TLS certificate for an unrelated host. This profile was surfaced as an Insight Partners portfolio lead and enriched by the API Evangelist pipeline.
 
-Backed by: insight-partners — https://designstripe.com/
+**Areas:** Company · Consumer · Design · Artificial Intelligence · Presentations · Go-To-Market · Marketing · Generative AI · Software-as-a-Service
+
+## designstripe on APIs.io
+
+Everything profiled for designstripe is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/designstripe/](https://apis.io/providers/designstripe/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Designstripe Domain Security](https://apis.io/security/designstripe/designstripe-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Designstripe Plans Pricing](https://apis.io/plans/designstripe/designstripe-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Designstripe Rate Limits](https://apis.io/rate-limits/designstripe/designstripe-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://designstripe.com/)
+- [Support](https://visual.app/contact)
+- [Blog](https://visual.app/blog)
+- [Privacy policy](https://visual.app/privacy)
+- [GitHub](https://github.com/DesignStripe)
+
+## API Evangelist rating
+
+**Kin Score 7.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 10.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.1** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/designstripe/](https://apis.io/providers/designstripe/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for designstripe: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/designstripe/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
